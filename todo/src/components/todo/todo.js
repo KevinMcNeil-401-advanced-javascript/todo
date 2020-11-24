@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TodoForm from './form.js';
 import TodoList from './list.js';
-
 import './todo.scss';
 
 function ToDO() {
@@ -26,7 +25,6 @@ function ToDO() {
 
   };
 
-
   componentDidMount() {
     let list = [
       { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A' },
@@ -44,9 +42,7 @@ function ToDO() {
           There are {this.state.list.filter(item => !item.complete).length} Items To Complete
           </h2>
       </header>
-
       <section className="todo">
-
         <div>
           <TodoForm handleSubmit={this.addItem} />
         </div>
